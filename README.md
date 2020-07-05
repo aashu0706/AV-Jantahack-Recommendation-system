@@ -31,4 +31,3 @@ test.csv: Contains the first 10 challenges solved by a new user set (not in trai
 •	Further we tried using BiDirectional GRU. Here as well, embedding sizes were tuned.
 •	Finally we ensembled 6 models (3 LSTM with different embedding size & 3 GRU with different embedding sizes)
 •	During test time, we obtained a probability distribution for each sequence. Then, chose top-3 argmax probabilities as 11th, 12th and 13th challenges predicted.
-
