@@ -24,7 +24,7 @@ challenge_data.csv: Contains attributes related to each challenge
 test.csv: Contains the first 10 challenges solved by a new user set (not in train) in the test set. We need to predict
 
 ## Solution:
-•	Approached as a Text Generation Problem; where a sequence of words is used to predict the next word
+•	Approached as a Text Generation Problem; where a sequence of words is used to predict the next word \n
 •	Each user in the training set was replicated 3 times, i.e. sequence of the 10 challenges solved and their three labels (for 11th, 12th and 13th challenges). These 10 challenges are label encoded.
 •	Now we had a multiclassification problem with 5606 classes and around 200k observations
 •	The classification is done using BiDirectional LSTM. This model was optimised (size of embedding was tuned)
