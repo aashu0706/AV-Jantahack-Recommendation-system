@@ -19,16 +19,16 @@ The client has provided you with history of last 10 challenges the user has solv
 
 There are three files:
 
-train.csv: It contains the set of 13 challenges that were attempted by the same user in a sequence.
-challenge_data.csv: Contains attributes related to each challenge
-test.csv: Contains the first 10 challenges solved by a new user set (not in train) in the test set. We need to predict
+train.csv: It contains the set of 13 challenges that were attempted by the same user in a sequence. <br />
+challenge_data.csv: Contains attributes related to each challenge <br />
+test.csv: Contains the first 10 challenges solved by a new user set (not in train) in the test set. We need to predict <br />
 
 ## Solution:
-•	Approached as a Text Generation Problem; where a sequence of words is used to predict the next word
-•	Each user in the training set was replicated 3 times, i.e. sequence of the 10 challenges solved and their three labels (for 11th, 12th and 13th challenges). 
-•	All the challenges were label encoded
-•	Now we had a multiclassification problem with 5606 classes and around 200k observations
-•	The classification is done using BiDirectional LSTM. This model was optimised (size of embedding was tuned)
-•	Further we tried using BiDirectional GRU. Here as well, embedding sizes were tuned.
-•	Finally we ensembled 6 models (3 LSTM with different embedding size & 3 GRU with different embedding sizes)
+•	Approached as a Text Generation Problem; where a sequence of words is used to predict the next word <br />
+•	Each user in the training set was replicated 3 times, i.e. sequence of the 10 challenges solved and their three labels (for 11th, 12th and 13th challenges). <br />
+•	All the challenges were label encoded <br />
+•	Now we had a multiclassification problem with 5606 classes and around 200k observations <br />
+•	The classification is done using BiDirectional LSTM. This model was optimised (size of embedding was tuned) <br />
+•	Further we tried using BiDirectional GRU. Here as well, embedding sizes were tuned. <br />
+•	Finally we ensembled 6 models (3 LSTM with different embedding size & 3 GRU with different embedding sizes) <br />
 •	During test time, we obtained a probability distribution for each sequence. Then, chose top-3 argmax probabilities as 11th, 12th and 13th challenges predicted.
