@@ -3,7 +3,7 @@ Approach to "Analytics Vidhya Janatahack: Recommendation system"
 
 Hosted at: https://datahack.analyticsvidhya.com/contest/janatahack-recommendation-systems/#ProblemStatement
 
-Rank: 2 from 12,007 registered participant.
+Rank: 3 from 12,007 registered participant.
 
 Solution available in jupyter notebook form.
 
